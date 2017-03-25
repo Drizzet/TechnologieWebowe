@@ -6,39 +6,48 @@
 </head>
 
 <body>	
-	<--!Wrapper -->
-	<div id="wrapper">
-	<section class="list">
-		<div>
-		<h2>Moja lista</h2>
-		<input type="text" name="input"/>
-		<input type="submit" name="Binput"
-		value="Dodaj" />  
+	<div class="wrapper">
+		<section>
+			<div class="add">
+				<h2>Moja lista</h2>
+				<input type="text" name="input" id="intext"/>
+				<input type="button" value="Dodaj" id="inbttn"/>  
+			</div>
+		
+	
+		<aside>
+			<span> 09.03.2017 </span>
+		</aside>
+
+		<div class="list">
+		<ul>
+				<li>
+				<input type="checkbox" name="service"
+					value="l1" id="task1" /> 
+				</li> <label>przeczytaj podręcznik </label>
+				<li><input type="button" value="usuń" id="btask1 />
+				</li><br />
+			
+				<li>
+				<input type="checkbox" name="service"
+					value="l1" id="task2"/>
+				</li> <label>zrób zakupy </label>
+				<li><input type="button" value="usuń" id="btask2" />
+				</li><br />
+			
+				<li>
+				<input type="checkbox" name="service"
+					value="l1" id="task3" />
+				</li> <label>posprzątaj</label>
+				<li><input type="button" value="usuń" id="btask3" />
+				</li><br />
+				
+			</ul>
 		</div>
-	</section>
-	
-	<aside>
-		<label> Data : 09.03.2017 </label>
-	</aside>
-	
-	<ul>
-		<input type="checkbox" name="service"
-		    value="l1" /> <label>przeczytaj podręcznik </label>
-			<button> <label> usuń </label> </button><br />
-		
-		<input type="checkbox" name="service"
-		    value="l2" /> <label>zrób zakupy </label>
-			<button> <label> usuń </label> </button> <br />
-		
-		<input type="checkbox" name="service"
-		    value="l3" /> <label>posprzątaj </label>
-			<button> <label> usuń </label> </button><br />
-	</ul>
-
-
-<footer>
-    &copy; Drizzet
-</footer>
-
+		</section>
+		<footer>
+			&copy; Drizzet
+		</footer>
+	</div>
 </body>
 </html>
