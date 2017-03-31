@@ -11,7 +11,6 @@ function bin(x){
 			i++;
 	}
 	return tab;
-	//return tab.reverse();
 }
 
 var a = 83;
