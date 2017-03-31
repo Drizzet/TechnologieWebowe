@@ -6,8 +6,10 @@ zwraca go oraz jego indeks (jeśli jest kilka takich elementów,
  
  function find(tab,x){
 	 var i=0;
-	 while(tab[i]!=x){
+	 while(tab[i]!=x && i <= tab.length){
 	 i++;}
+	 if(i>tab.length)
+		 i=-0;
 	 return i;
  }
  
