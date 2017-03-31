@@ -1,0 +1,70 @@
+nowa linia:	 <br> lub <br />
+
+akapit:	<p> tresc </p>
+
+naglowki: <h1>Naglowek 1 </h1> (od 1 do 6)
+
+<b> tekst pogrubiony </b>
+
+<i> kursywa </i>
+
+<u> podkreslenie </u>
+
+krotki cytat: <q> krotki cytat </q>
+
+odniesie do zrodla: <cite> odniesienie </cite>
+
+blok cytowant: <blockquote> cytat </blockquote>
+
+Obrazki na stronie <img src='wzgledna sciezka" alt="tekst alternatywny" />
+
+linki:
+	do strony: <a href="sciezka" > opis odsylacza </a>
+	pocztowy: <a href="mailto:sciezka" > opis odsylacza </a>
+otwarcie linku w nowej karcie: target="blank"
+
+tabele:
+	<table>
+		<thead>
+			<tr>
+				<th>...</th></th>...</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>...</td></td>...</td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<td>...</td></td>...</td>
+			</tr>
+		</tfoot>
+	</table>
+
+laczenie komorek:
+	w pionie:	<td rowspan="x">...</td>
+	w poziomie:	<td colspan="x">...</td>
+
+listy numerowane:
+	<ol>
+		<li>element</li>
+		<li>element</li>
+		<li>element</li>
+	</ol>
+	
+listy nienumerowane:
+	<ul>
+		<li>element</li>
+		<li>element</li>
+		<li>element</li>
+	</ul>
+
+<span> - zgrupowanie elemntow typu inline(np.slow w tekscie albo obrazkow),
+zazywczaj w celu przypisania im okreslonego stylu
+
+<div> - utworzenie sekcji
+
+STYLE
+<h1 style="color: red;">Czerwony naglowek</h1>
+

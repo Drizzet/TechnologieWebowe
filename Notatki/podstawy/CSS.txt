@@ -1,0 +1,66 @@
+selektor {
+	wlasciwosci: wartosc;
+}
+
+dolaczanie zewnetrznego css-a
+
+<!DOCTYPE html>
+<html>
+	<head>
+	(...)
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	(...)
+	</head>
+	<body>
+		Cialo strony
+	</body>
+</html>
+
+Klasy i indetyfikatory:----------------------------------------------------
+	<div class="class-name">Sekcja</div>
+	
+	<div id="id-name">Sekcja</div>
+
+Odniesienie w CSS:---------------------------------------------------------
+	.class-name{}
+	
+	#id-name{}
+	
+em - wysokosc aktualnej czcionki;
+rem - wysokosc czcionki elemntu korzenia w drzewiw dokumentu;
+in - cale(2,54cm);
+px - piksele(1/96 in);
+pt - punkty (1/72 in);
+vw - procentowa szerokosc obszaru do wyswietlenia;
+vh - procentowa wysokosc obszaru do wyswietlenia;
+
+Kolorowanie tła:-----------------------------------------------------------
+	slektor{
+		background-color: kolor;
+		}
+	Przykłady:
+	div{
+		background-color: #674370;
+		}
+	.sealcode{
+		background-color: rgb(100,65,109);
+		}
+
+Stylowanie tekstu ---------------------------------------------------------
+.text {
+	color: rgba(100,5,109,0,0.5);
+	font-size: 2rem;
+	font-weight: bold|lighter|bolder|normal|skala;
+	font-family: Helvetica,sans-serif;
+	font-style: italic | oblique | normal;
+	font-variant: small-caps | normal;
+	line-height: 1.5rem;
+/*font: style|variant|weight|size|/line-height|family|*/
+	font:italic small-caps bold 20 px /20px Taoma, serif;
+	}
+
+selektor uniwersalny-------------------------------------------------------
+*{
+	color: red;
+	line-height:1.5rem;
+}
