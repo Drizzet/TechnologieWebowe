@@ -4,11 +4,9 @@ zwróci jego reprezentację binarną.*/
 
 function bin(x){
 	var tab = "";
-	var i = 0;
 	while(x != 0){
 			tab = (x%2).toString() + tab;
 			x = Math.floor(x/2);
-			i++;
 	}
 	return tab;
 }
