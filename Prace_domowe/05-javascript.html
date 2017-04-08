@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 	<head>
 		<title>Zadanie 1.</title>
@@ -15,24 +15,24 @@
 	h.innerHTML = 'Dawid Bogacki';
 
 
-	var daysOfWeek = ['niedziela', 'poniedzialek', 'wtorek', 'sroda', 'czwartek', 'piatek', 'sobota'];
-	var months = ['stycznia', 'lutego', 'marca', 'kwietnia', 'maja', 'czerwca', 'lipca', 'sierpnia', 'wrzesnia', 'pazdziernika', 'listopada', 'grudnia'];
+	var daysOfWeek = ['niedziela', 'poniedziałek', 'wtorek', 'środa', 'czwartek', 'piątek', 'sobota'];
+	var months = ['stycznia', 'lutego', 'marca', 'kwietnia', 'maja', 'czerwca', 'lipca', 'sierpnia', 'września', 'października', 'listopada', 'grudnia'];
 	var d = new Date();
 	var p1 = document.getElementById('paragraph-one');
-	p1.innerHTML = 'Data, kt�ra pojawi sie przy otwarciu tej strony to: ' + daysOfWeek[d.getDay()] + ', ' + d.getMonth() + ', ' +  months[d.getMonth()] + ', ' + d.getFullYear() + 'r. <br />' +
+	p1.innerHTML = 'Data, która pojawi się przy otwarciu tej strony to: ' + daysOfWeek[d.getDay()] + ', ' + d.getDate() + ', ' +  months[d.getMonth()] + ', ' + d.getFullYear() + 'r. <br />' +
 	'Godzina w momencie otwarcia strony: '+ d.getHours() + ':' + d.getMinutes() + ':' + d.getSeconds() + ':' + d.getMilliseconds() + '.';
 
 
-	var t = 'Podstawa szczescia jest wolnosc, a podstawa wolnosci odwaga.';
+	var t = 'Podstawą szczęścia jest wolność, a podstawą wolności odwaga.';
 	var p2 = document.getElementById('paragraph-two');
-	p2.innerHTML = 'Operuje na zdaniu: "Podstawa szczescia jest wolnosc, a podstawa wolnosci odwaga." <br /> <br />' + 
+	p2.innerHTML = 'Operuje na zdaniu: "Podstawą szczęścia jest wolność, a podstawą wolności odwaga." <br /> <br />' + 
 	'Trzynastym znakiem w tym zdaniu jest: ' + t.charAt(13) + '. <br />' +
 	'Znaki pomiedzy 7. a 12. pozycja to: ' + t.substring(7, 12) + '. <br />' +
-	"Pierwszy raz znak 'a' pojawia sie na miejscu: " +  t.indexOf('a') + '. <br />' +
-	'Ten ciag ma ' + t.length + ' znak�w. <br />' +
-	"Po zamianie 'podstawa' na 'fundamentem' mamy: " + t.replace('podstawa','fundamentem') + '. <br />' +
-	'Czesc zdania przed przecinkiem to: ' + t.split(',')[0] + '. <br />' +
-	'Druga czesc zdania po odwr�ceniu to:' + t.split(',')[1].split('').reverse().join('');
+	"Pierwszy raz znak 'ą' pojawia sie na miejscu: " +  t.indexOf('ą') + '. <br />' +
+	'Ten ciąg ma ' + t.length + ' znaków. <br />' +
+	"Po zamianie 'podstawą' na 'fundamentem' mamy: " + t.replace('podstawą','fundamentem') + '. <br />' +
+	'Część zdania przed przecinkiem to: ' + t.split(',')[0] + '. <br />' +
+	'Druga część zdania po odwróceniu to:' + t.split(',')[1].split('').reverse().join('');
 
 
 	var a = 1;
@@ -43,22 +43,22 @@
 	var x1 = (-b - sqrtDelta) / (2*a); //obliczamy pierwsze miejsce zerowe
 	var x2 = (-b + sqrtDelta) / (2*a); //obliczamy drugie miejsce zerowe
 	var p3 = document.getElementById('paragraph-three');
-	p3.innerHTML = 'Korzystam z dodatkowych wiadomosci o obiekcie Math ze strony: http://kursjs.pl/kurs/math.php <br /><br />' +
-	'Zadanie 1. Mam funkcje kwadratowa: <br />' +
+	p3.innerHTML = 'Korzystam z dodatkowych wiadomości o obiekcie Math ze strony: http://kursjs.pl/kurs/math.php <br /><br />' +
+	'Zadanie 1. Mam funkcję kwadratową: <br />' +
 	'f(x) = x^2 + 5x + 6 <br /> <br />' +
-	'Wyr�znik tego tr�jmianu to: ' + delta + '. <br />' +
-	'Pierwiastek kwadratowy tego wyr�znika to: ' + sqrtDelta + '. <br />' +
-	'Miejscami zerowymi tej funkcji sa: ' + x1 + ' i ' + x2 + '.';
+	'Wyróżnik tego trójmianu to: ' + delta + '. <br />' +
+	'Pierwiastek kwadratowy tego wyróżnika to: ' + sqrtDelta + '. <br />' +
+	'Miejscami zerowymi tej funkcji są: ' + x1 + ' i ' + x2 + '.';
 
 	var x = (Math.PI) / 6;
 	var w = Math.sqrt(Math.abs(Math.sin(Math.log(Math.pow(2, x))) + Math.max(0, x) + Math.abs(-Math.exp(2 * x) + Math.min(-1, x))));
 	var p4 = document.getElementById('paragraph-four');
 	p4.innerHTML = 'Kontynuuje prace z obiektem Math i uzywam obiektu Number: <br /> <br />' +
-	'Zadanie 2. Obliczam wartosc funkcji: <br />' +
+	'Zadanie 2. Obliczam wartość funkcji: <br />' +
 	'f(x) = sqrt(|sin(ln(2^(x))) + max(0, x) + |-e^(2x) + min(-1, x)||) <br />' + 
 	'dla x = pi/6. <br /> <br />' +
-	'M�j wynik to: ' + w + '. <br />' +
-	'Wynik w notacji wykladniczej to: ' + w.toExponential() + '. <br />' +
-	'Po zaokraleniu wyniku w g�re mam: ' + Math.ceil(w) + '.';
+	'Mój wynik to: ' + w + '. <br />' +
+	'Wynik w notacji wykładniczej to: ' + w.toExponential() + '. <br />' +
+	'Po zaokrągleniu wyniku w górę mam: ' + Math.ceil(w) + '.';
 	</script>
 </html>
