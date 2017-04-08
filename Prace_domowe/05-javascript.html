@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Zadanie 1.</title>
+	</head>
+	<body>
+		<h1 id="heading">xyz</h1>
+		<p id="paragraph-one">xyz</p>
+		<p id="paragraph-two">xyz</p>
+		<p id="paragraph-three">xyz</p>
+		<p id="paragraph-four">xyz</p>
+	</body>
+	<script>
+    var h = document.getElementById('heading');
+	h.innerHTML = 'Dawid Bogacki';
+
+
+	var daysOfWeek = ['niedziela', 'poniedzialek', 'wtorek', 'sroda', 'czwartek', 'piatek', 'sobota'];
+	var months = ['stycznia', 'lutego', 'marca', 'kwietnia', 'maja', 'czerwca', 'lipca', 'sierpnia', 'wrzesnia', 'pazdziernika', 'listopada', 'grudnia'];
+	var d = new Date();
+	var p1 = document.getElementById('paragraph-one');
+	p1.innerHTML = 'Data, która pojawi sie przy otwarciu tej strony to: ' + daysOfWeek[d.getDay()] + ', ' + d.getMonth() + ', ' +  months[d.getMonth()] + ', ' + d.getFullYear() + 'r. <br />' +
+	'Godzina w momencie otwarcia strony: '+ d.getHours() + ':' + d.getMinutes() + ':' + d.getSeconds() + ':' + d.getMilliseconds() + '.';
+
+
+	var t = 'Podstawa szczescia jest wolnosc, a podstawa wolnosci odwaga.';
+	var p2 = document.getElementById('paragraph-two');
+	p2.innerHTML = 'Operuje na zdaniu: "Podstawa szczescia jest wolnosc, a podstawa wolnosci odwaga." <br /> <br />' + 
+	'Trzynastym znakiem w tym zdaniu jest: ' + t.charAt(13) + '. <br />' +
+	'Znaki pomiedzy 7. a 12. pozycja to: ' + t.substring(7, 12) + '. <br />' +
+	"Pierwszy raz znak 'a' pojawia sie na miejscu: " +  t.indexOf('a') + '. <br />' +
+	'Ten ciag ma ' + t.length + ' znaków. <br />' +
+	"Po zamianie 'podstawa' na 'fundamentem' mamy: " + t.replace('podstawa','fundamentem') + '. <br />' +
+	'Czesc zdania przed przecinkiem to: ' + t.split(',')[0] + '. <br />' +
+	'Druga czesc zdania po odwróceniu to:' + t.split(',')[1].split('').reverse().join('');
+
+
+	var a = 1;
+	var b = 5;
+	var c = 6;
+	var delta = Math.pow(b,2) - (4*a*c) //obliczamy delte
+	var sqrtDelta = Math.sqrt(delta); //obliczamy pierwiastek kwadratowy delty
+	var x1 = (-b - sqrtDelta) / (2*a); //obliczamy pierwsze miejsce zerowe
+	var x2 = (-b + sqrtDelta) / (2*a); //obliczamy drugie miejsce zerowe
+	var p3 = document.getElementById('paragraph-three');
+	p3.innerHTML = 'Korzystam z dodatkowych wiadomosci o obiekcie Math ze strony: http://kursjs.pl/kurs/math.php <br /><br />' +
+	'Zadanie 1. Mam funkcje kwadratowa: <br />' +
+	'f(x) = x^2 + 5x + 6 <br /> <br />' +
+	'Wyróznik tego trójmianu to: ' + delta + '. <br />' +
+	'Pierwiastek kwadratowy tego wyróznika to: ' + sqrtDelta + '. <br />' +
+	'Miejscami zerowymi tej funkcji sa: ' + x1 + ' i ' + x2 + '.';
+
+	var x = (Math.PI) / 6;
+	var w = Math.sqrt(Math.abs(Math.sin(Math.log(Math.pow(2, x))) + Math.max(0, x) + Math.abs(-Math.exp(2 * x) + Math.min(-1, x))));
+	var p4 = document.getElementById('paragraph-four');
+	p4.innerHTML = 'Kontynuuje prace z obiektem Math i uzywam obiektu Number: <br /> <br />' +
+	'Zadanie 2. Obliczam wartosc funkcji: <br />' +
+	'f(x) = sqrt(|sin(ln(2^(x))) + max(0, x) + |-e^(2x) + min(-1, x)||) <br />' + 
+	'dla x = pi/6. <br /> <br />' +
+	'Mój wynik to: ' + w + '. <br />' +
+	'Wynik w notacji wykladniczej to: ' + w.toExponential() + '. <br />' +
+	'Po zaokraleniu wyniku w góre mam: ' + Math.ceil(w) + '.';
+	</script>
+</html>
