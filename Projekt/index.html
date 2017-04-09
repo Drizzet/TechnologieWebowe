@@ -6,50 +6,49 @@
 	<meta name="description" content="Aplikacja ToDo stworzona na zajecia sealcode"/>
 	<link href="style.css" rel="stylesheet" type="text/css" />
 </head>
-
 <body>	
 	<div class="wrapper">
+		<h1>Aplikacja ToDo</h1>
 		<section>
 			<div class="add">
-				<h2>Moja lista</h2>
-				<input type="text" name="input" id="intext"/>
-				<input type="button" value="Dodaj" id="inbttn"/>  
+				<input type="text" class="input" name="input" id="intext" placeholder="Dopisz nowe zadanie..."/>
+				<input type="button" class="button" value="Dodaj" id="inbttn"/>  
 			</div>
 		
 	
 		<aside>
-			<span> 09.03.2017 </span>
+			<p id="datetime"> 09.03.2017 </p>
 		</aside>
-
-		<div class="list">
+		
+		<h2>Twoja lista:</h2>
 		<ul>
 				<li>
-				<input type="checkbox" name="service"
+				<input type="checkbox" class="check" name="service"
 					value="l1" id="task1" /> 
 				<label>przeczytaj podręcznik </label>
-				<input type="button" value="usuń" id="btask1" />
+				<input type="button" class="delete" value="usuń" id="btask1" />
 				</li>
 			
 				<li>
-				<input type="checkbox" name="service"
+				<input type="checkbox" class="check" name="service"
 					value="l1" id="task2"/>
 				<label>zrób zakupy </label>
-				<input type="button" value="usuń" id="btask2" />
+				<input type="button" class="delete" value="usuń" id="btask2" />
 				</li>
 			
 				<li>
-				<input type="checkbox" name="service"
+				<input type="checkbox" class="check" name="service"
 					value="l1" id="task3" />
 				 <label>posprzątaj</label>
-				<input type="button" value="usuń" id="btask3" />
-				</li>
-				
-			</ul>
-		</div>
+				<input type="button" class="delete" value="usuń" id="btask3" />
+				</li>	
+		</ul>
+
 		</section>
 		<footer>
 			&copy; Drizzet
 		</footer>
 	</div>
+	<script src="script.js"></script>
 </body>
 </html>
