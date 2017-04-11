@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<div class="wrapper">
+			<h1 class="example">Zadanie 11.2.</h1>
+			<ul>
+				<li id="li-1">Punkt 1.</li>
+				<li id="li-2">Punkt 2.</li>
+				<li id="li-3">Punkt 3.</li>
+				<li id="li-4">Punkt 4.</li>
+			</ul>
+			<p class="example">Tu jest treść akapitu</p>
+		</div>
+	</body>
+	<script>
+	var u = document.getElementsByTagName('ul')
+	var i=0;
+	for(i=0;i<u.length;i++)
+	console.log(u[i].textContent);
+	
+	var e = document.getElementsByClassName('example');
+	for(var j=0;j<e.length;j++)
+	console.log(e[j].textContent);
+	</script>
+</html>
