@@ -6,12 +6,13 @@ body{
 .wrapper{
 	margin: 0 auto;
 	height: 31.25rem;
-	padding: 0.625rem 0.625rem;
+	padding: 0.5rem 0.5rem;
 	position: relative;
 	text-align: center;
 }
 h1{
 	background-color: MediumPurple;
+	height: 3rem;
 }
 .add {
 	margin-bottom: 1.25rem;
