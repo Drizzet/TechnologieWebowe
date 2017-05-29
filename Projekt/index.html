@@ -5,7 +5,7 @@
 	<title>Aplikacja ToDo - Dawid Bogacki</title>
 	<meta name="description" content="Aplikacja ToDo stworzona na zajecia sealcode"/>
 	<link href="style.css" rel="stylesheet" type="text/css" />
-	<link rel="stylesheet" href="http://basehold.it/16">
+
 </head>
 <body>	
 	<div class="wrapper">
@@ -13,36 +13,16 @@
 		<section>
 			<div class="add">
 				<input type="text" class="input" name="input" id="intext" placeholder="Dopisz nowe zadanie..."/>
-				<input type="button" class="button" value="Dodaj" id="inbttn"/>  
+				<input type="button" class="button" value="Dodaj" id="inbttn" onclick="add()"/>  
 			</div>
 		
 	
 		<aside>
-			<p id="datetime"> 09.03.2017 </p>
+			<p id="datetime"></p>
 		</aside>
 		
 		<h2>Twoja lista:</h2>
-		<ul>
-				<li>
-				<input type="checkbox" class="check" name="service"
-					value="l1" id="task1" /> 
-				<label>przeczytaj podręcznik </label>
-				<input type="button" class="delete" value="usuń" id="btask1" />
-				</li>
-			
-				<li>
-				<input type="checkbox" class="check" name="service"
-					value="l1" id="task2"/>
-				<label>zrób zakupy </label>
-				<input type="button" class="delete" value="usuń" id="btask2" />
-				</li>
-			
-				<li>
-				<input type="checkbox" class="check" name="service"
-					value="l1" id="task3" />
-				 <label>posprzątaj</label>
-				<input type="button" class="delete" value="usuń" id="btask3" />
-				</li>	
+		<ul id="list">
 		</ul>
 		</section>
 		<footer>
