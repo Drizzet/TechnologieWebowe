@@ -62,10 +62,7 @@ function add(){
 }
 
 function del(){
-	for(var a = this.id;a <= tabLength-1;a++)
-	{
-		tabList[a]=tabList[a+1];
-	}
+	tabList.splice(this.id,1);
 	tabLength--;
 	reload();
 }
