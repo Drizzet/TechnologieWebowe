@@ -6,6 +6,7 @@ dt.innerHTML = d.getDate() + ' ' + months[d.getMonth()] + ' ' + d.getFullYear() 
 var tabList = [];
 var tabLength = 0;
 var list = document.getElementById('list');
+var url='http://sealcode.org:8082/api/v1/resources/task';		//API sealcodowe
 
 function reload(){
 	document.getElementById("intext").value = '';	//czyszczenie pola do wpisywania zadania
@@ -34,7 +35,7 @@ function reload(){
 			var	newCheck = document.createElement('input');			//checkbox	
 			newCheck.type = 'checkbox';
 			newCheck.setAttribute('class', 'check');
-			if(tabList[i].check == 1){
+			if(tabList[i].check == true){
 				newCheck.checked = 'checked';
 			}
 			newCheck.setAttribute('id', i);
@@ -56,7 +57,7 @@ function add(){
 	}
 	else{
 		tabList[tabLength] = { 	tekst: input,
-								check: 0};
+								check: false};
 		tabLength++;
 	}
 	reload();
@@ -70,10 +71,10 @@ function del(){
 
 function check(){
 	
-	if(tabList[this.id].check==1){
-	tabList[this.id].check=0;
+	if(tabList[this.id].check==true){
+	tabList[this.id].check=false;
 	}else{
-	tabList[this.id].check=1;}
+	tabList[this.id].check=true;}
 	reload();
 }
 function keyEnter(event){
