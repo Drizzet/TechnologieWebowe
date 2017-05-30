@@ -37,6 +37,7 @@ function reload(){
 			if(tabList[i].check == 1){
 				newCheck.checked = 'checked';
 			}
+			newCheck.setAttribute('id', i);
 			newCheck.onclick = check;
 			
 			newElement.appendChild(newCheck);
@@ -68,6 +69,7 @@ function del(){
 }
 
 function check(){
+	
 	if(tabList[this.id].check==1){
 	tabList[this.id].check=0;
 	}else{
