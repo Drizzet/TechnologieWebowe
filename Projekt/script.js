@@ -66,6 +66,7 @@ function add(){
 	qwest.post(url, {title: tabList[tabLength].title, is_done: tabList[tabLength].is_done}, {cache: true});
 	}
 	console.log('dodaje taska, tabLength: ',tabLength);
+	//window.location.reload();
 	getTasks();
 	//reload();
 }
@@ -73,9 +74,11 @@ function add(){
 function del(){
 	//tabList.splice(this.id,1);
 	qwest.delete(url+'/'+tabList[this.id].id, null, {cache: true}).then(function(xhr, response){
-	getTasks();})
-	//reload();})
+	//window.location.reload();
+	getTasks();
+	//reload();
 	//tabLength--;
+	})
 }
 
 function check(){
@@ -86,7 +89,8 @@ function check(){
 	tabList[this.id].check=true;}*/
 	tabList[this.id].body.is_done = this.checked;
 	qwest.map('PATCH', url+'/'+tabList[this.id].id, tabList[this.id].body, {cache: true}).then(function(xhr, response) { // szukamy odpowiedniego zasobu na serwerze i modyfikujemy jego ciało
-		getTasks(); // odświeżamy stan strony
+	getTasks();
+	//window.location.reload();//	getTasks(); // odświeżamy stan strony
 	});
 }
 function keyEnter(event){
@@ -103,7 +107,7 @@ document.onload = getTasks();
 
 //pobieranie danych
 function getTasks() { // pobieramy listę zadań po wystąpieniu odpowiedniego zdarzenia
-	
+	tabList = [];
 	tabLength = 0;
 	qwest.get(url, {}, {cache: true}).then(
 		function(xhr, response) {
