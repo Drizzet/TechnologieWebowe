@@ -23,7 +23,7 @@ function reload(){
 	else{										//ładowanie niepustej listy
 	for (var i=0; i<tabLength; i++){
 			var newElement = document.createElement('li');			// Utworzenie nowego elementu i przechowywanie go w zmiennej.
-			var newText = document.createTextNode(tabList[i].body.title);	// Utworzenie węzła tekstowego i przechowywanie go w zmiennej.
+			var newText = document.createTextNode(tabList[i].body.title + ' ');	// Utworzenie węzła tekstowego i przechowywanie go w zmiennej.
 			console.log('dodaje do listy ',newText);
 			var position = list;										// Wyszukanie miejsca, w którym powinien być dodany nowy element.
 			
@@ -115,8 +115,8 @@ function getTasks() { // pobieramy listę zadań po wystąpieniu odpowiedniego z
 				tabList.push(element);//tasks.push(element); // dodajemy pobrany element zasobu do tablicy "tasks"
 				/* Teraz treść danego zadania i jego inne własciwości będą ukrywać się w tasks[index].body.nazwaWlasciwosci, np. tasks[0].body.title - nazwa pierwszego zadania w tablicy! */
 				tabLength++;
-			console.log('getuje task');
-				 reload();// odświeżamy stan strony
+				console.log('getuje task');
+				reload();// odświeżamy stan strony
 	})});
 }
 /*
